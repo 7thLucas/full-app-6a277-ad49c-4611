@@ -1,0 +1,121 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500&display=swap');
+
+  .sl-root { font-family: 'Poppins', sans-serif; }
+  .sl-heading { font-family: 'DM Serif Display', serif; }
+
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+
+  .mode-landscape .sl-left { width: 42%; }
+  .mode-portrait .sl-left { width: 100%; }
+
+  .mode-landscape .sl-right { width: 58%; }
+  .mode-portrait .sl-right { display: none; }
+</style>
+
+<section class="sl-root w-full h-full overflow-auto bg-white" style="background-color: #FBF7F0;">
+  <div class="sl-layout w-full h-full flex">
+
+    <!-- Left: Sections list -->
+    <div class="sl-left flex flex-col p-10 gap-5 justify-center" style="border-right: 1px solid #E8A98A;">
+
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-6 h-0.5" style="background-color: #B17457;"></div>
+          <span class="text-xs font-medium uppercase tracking-widest" style="color: #B17457;">Storefront</span>
+        </div>
+        <h2 class="sl-heading text-3xl leading-tight" style="color: #4C4947;">
+          Pengalaman belanja<br><em style="color: #B17457;">tanpa hambatan</em>
+        </h2>
+      </div>
+
+      <div class="flex flex-col gap-2.5">
+
+        <div class="flex items-start gap-3 p-3 rounded-lg" style="background-color: #fff; border: 1px solid #E8A98A;">
+          <div class="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: #B17457;">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold" style="color: #4C4947;">Beranda Hero</p>
+            <p class="text-xs mt-0.5" style="color: #4C4947; opacity: 0.7;">Full-viewport hero, marquee bar, koleksi terkurasi, produk pilihan, editorial banner</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-3 rounded-lg" style="background-color: #fff; border: 1px solid #E8A98A;">
+          <div class="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: #B17457;">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold" style="color: #4C4947;">Halaman Produk</p>
+            <p class="text-xs mt-0.5" style="color: #4C4947; opacity: 0.7;">Galeri foto, pilih varian, stok real-time, WhatsApp Order, produk terkait</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-3 rounded-lg" style="background-color: #fff; border: 1px solid #E8A98A;">
+          <div class="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: #B17457;">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold" style="color: #4C4947;">Checkout</p>
+            <p class="text-xs mt-0.5" style="color: #4C4947; opacity: 0.7;">Form alamat, pilih kurir + estimasi ongkir, kode promo, Transfer/QRIS/COD</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-3 rounded-lg" style="background-color: #4C4947;">
+          <div class="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: #B17457;">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold" style="color: #FBF7F0;">Palestine Series</p>
+            <p class="text-xs mt-0.5" style="color: #E8A98A;">Motif keffiyeh eksklusif, 10% donasi, cerita solidaritas, teks Arab dekoratif</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-3 rounded-lg" style="background-color: #fff; border: 1px solid #E8A98A;">
+          <div class="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: #B17457;">
+            <span class="text-white text-xs font-bold">5</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold" style="color: #4C4947;">Halaman Lain</p>
+            <p class="text-xs mt-0.5" style="color: #4C4947; opacity: 0.7;">About Us, Lookbook, Blog, Kontak, Order Tracking publik</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: Visual mockup feel -->
+    <div class="sl-right relative overflow-hidden flex flex-col gap-2 p-6">
+
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=modern%20e-commerce%20website%20mockup%20on%20laptop%20screen%2C%20Indonesian%20modest%20fashion%20store%2C%20warm%20cream%20and%20clay%20brown%20color%20palette%2C%20product%20grid%20view%2C%20clean%20UI%20design%2C%20professional%20photography"
+        alt="Haifa Storefront"
+        class="w-full rounded-xl object-cover"
+        style="height: 55%; border: 2px solid #E8A98A;"
+      />
+
+      <div class="flex gap-2 flex-1">
+        <div class="flex-1 rounded-xl overflow-hidden" style="border: 2px solid #E8A98A;">
+          <img
+            src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=mobile%20phone%20showing%20hijab%20product%20detail%20page%2C%20warm%20beige%20and%20brown%20UI%2C%20add%20to%20cart%20button%2C%20minimal%20clean%20design"
+            alt="Mobile product page"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="flex-1 rounded-xl p-3 flex flex-col justify-between" style="background-color: #4C4947;">
+          <p class="text-xs font-semibold" style="color: #E8A98A;">Mobile-First</p>
+          <div>
+            <p class="text-xs" style="color: #FBF7F0; opacity: 0.8;">Bottom navigation, hamburger drawer, skeleton loader, toast notification, scroll reveal animation</p>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: #B17457; color: #fff;">SEO Ready</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: #B17457; color: #fff;">PWA</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
