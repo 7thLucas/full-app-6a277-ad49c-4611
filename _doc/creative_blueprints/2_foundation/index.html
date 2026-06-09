@@ -1,0 +1,118 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500&family=Scheherazade+New:wght@400;700&display=swap');
+
+  .sl-root { font-family: 'Poppins', sans-serif; }
+  .sl-heading { font-family: 'DM Serif Display', serif; }
+  .sl-arabic { font-family: 'Scheherazade New', serif; }
+
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+
+  .mode-landscape .sl-left { width: 55%; }
+  .mode-portrait .sl-left { width: 100%; }
+
+  .mode-landscape .sl-right { width: 45%; }
+  .mode-portrait .sl-right { display: none; }
+
+  .keffiyeh-accent {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(192,57,43,0.09) 0px,
+      rgba(192,57,43,0.09) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(192,57,43,0.06) 0px,
+      rgba(192,57,43,0.06) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  }
+</style>
+
+<section class="sl-root w-full h-full overflow-auto bg-white" style="background-color: #FBF7F0;">
+  <div class="sl-layout w-full h-full flex">
+
+    <!-- Left: Problem + Solution -->
+    <div class="sl-left flex flex-col p-10 gap-6 justify-center">
+
+      <!-- Slide label -->
+      <div class="flex items-center gap-2 mb-1">
+        <div class="w-6 h-0.5" style="background-color: #B17457;"></div>
+        <span class="text-xs font-medium uppercase tracking-widest" style="color: #B17457;">Tentang Haifa</span>
+      </div>
+
+      <!-- Headline -->
+      <h2 class="sl-heading text-4xl leading-tight" style="color: #4C4947;">
+        Modest fashion yang<br><em style="color: #B17457;">bermakna</em> dan<br>berkualitas premium
+      </h2>
+
+      <!-- Two narrative panels -->
+      <div class="flex flex-col gap-4 mt-2">
+
+        <!-- Problem -->
+        <div class="rounded-xl p-5" style="background-color: #F7EFD8; border-left: 4px solid #C96D3F;">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-5 h-5 rounded-full flex items-center justify-center" style="background-color: #C96D3F;">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V5M5 7V7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: #C96D3F;">Tantangan</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: #4C4947;">
+            Wanita muslimah Indonesia kesulitan menemukan busana yang menggabungkan kualitas premium, nilai keislaman, dan makna sosial dalam satu brand — tanpa harus berkompromi antara estetika dan keimanan.
+          </p>
+        </div>
+
+        <!-- Solution -->
+        <div class="rounded-xl p-5" style="background-color: #4C4947;">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-5 h-5 rounded-full flex items-center justify-center" style="background-color: #B17457;">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider" style="color: #E8A98A;">Solusi Haifa</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: #FBF7F0;">
+            Haifa Official Store hadir sebagai platform e-commerce busana muslimah premium yang memadukan keindahan mode, nilai Islami, dan solidaritas Palestina — dengan 10% donasi kemanusiaan dari setiap transaksi Palestine Series.
+          </p>
+          <p class="sl-arabic text-lg mt-3" style="color: #E8A98A; direction: rtl;">فلسطين في قلبنا</p>
+        </div>
+
+      </div>
+
+      <!-- Brand values row -->
+      <div class="flex gap-3 mt-1">
+        <div class="flex-1 text-center px-2 py-3 rounded-lg" style="background-color: #F7EFD8;">
+          <div class="sl-heading text-xl" style="color: #B17457;">100%</div>
+          <div class="text-xs mt-0.5" style="color: #4C4947;">Bahan Premium</div>
+        </div>
+        <div class="flex-1 text-center px-2 py-3 rounded-lg" style="background-color: #F7EFD8;">
+          <div class="sl-heading text-xl" style="color: #B17457;">10%</div>
+          <div class="text-xs mt-0.5" style="color: #4C4947;">Donasi Palestina</div>
+        </div>
+        <div class="flex-1 text-center px-2 py-3 rounded-lg" style="background-color: #F7EFD8;">
+          <div class="sl-heading text-xl" style="color: #B17457;">Lokal</div>
+          <div class="text-xs mt-0.5" style="color: #4C4947;">Pengrajin Indonesia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-right relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=flat%20lay%20of%20premium%20muslim%20women%20clothing%20collection%2C%20hijabs%20and%20modest%20dresses%20in%20clay%20brown%20and%20warm%20cream%20tones%2C%20keffiyeh%20pattern%20detail%2C%20Palestinian%20solidarity%2C%20artisan%20fabric%20texture%2C%20editorial%20styling"
+        alt="Haifa Collection"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, rgba(76,73,71,0.5) 100%);"></div>
+      <!-- Keffiyeh overlay band -->
+      <div class="keffiyeh-accent absolute top-0 left-0 right-0 h-8 opacity-50"></div>
+      <!-- Caption -->
+      <div class="absolute bottom-6 left-5 right-5">
+        <p class="text-xs font-medium" style="color: #E8A98A;">Motif Keffiyeh Eksklusif Haifa — Diproduksi Pengrajin Lokal</p>
+      </div>
+    </div>
+
+  </div>
+</section>
