@@ -2,7 +2,7 @@
 
 ## What It Is
 
-Haifa Official Store is a full-stack e-commerce website for premium Indonesian Muslim fashion (busana muslimah). It consists of two parts: a public-facing **Storefront** and a protected **Admin Panel** (route `/admin`), built on React + Tailwind CSS with Supabase as the backend.
+Haifa Official Store is a full-stack e-commerce website for premium Indonesian Muslim fashion (busana muslimah). It consists of two parts: a public-facing **Storefront** and a protected **Admin Panel** (route `/admin`), built on Remix + TypeScript with Express and MongoDB as the backend.
 
 ## Brand Identity
 
