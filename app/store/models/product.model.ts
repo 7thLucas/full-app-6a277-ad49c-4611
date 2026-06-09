@@ -51,7 +51,7 @@ export class ProductReview {
 })
 @index({ name: "text", description: "text" })
 export class Product extends TimeStamps {
-  @prop({ required: true })
+  @prop({ type: () => String, required: true })
   name!: string;
 
   @prop({ required: true, unique: true })
