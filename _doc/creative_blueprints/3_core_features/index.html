@@ -1,0 +1,97 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500&display=swap');
+
+  .sl-root { font-family: 'Poppins', sans-serif; }
+  .sl-heading { font-family: 'DM Serif Display', serif; }
+
+  .persona-chip { cursor: default; transition: all 0.2s; }
+  .persona-chip.active { background-color: #B17457; color: #fff; }
+  .persona-chip.inactive { background-color: #F7EFD8; color: #4C4947; }
+
+  .feature-card { transition: box-shadow 0.2s; }
+
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="sl-root w-full h-full overflow-auto bg-white p-10" style="background-color: #FBF7F0;">
+
+  <!-- Header -->
+  <div class="flex items-start justify-between mb-4">
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <div class="w-6 h-0.5" style="background-color: #B17457;"></div>
+        <span class="text-xs font-medium uppercase tracking-widest" style="color: #B17457;">Fitur Utama</span>
+      </div>
+      <h2 class="sl-heading text-3xl leading-tight" style="color: #4C4947;">
+        Storefront + Admin Panel<br><em style="color: #B17457;">dalam satu ekosistem</em>
+      </h2>
+    </div>
+
+    <!-- Persona chips -->
+    <div class="flex gap-2 mt-1">
+      <span class="persona-chip active text-xs px-3 py-1.5 rounded-full font-medium">Pembeli</span>
+      <span class="persona-chip inactive text-xs px-3 py-1.5 rounded-full font-medium">Admin Toko</span>
+    </div>
+  </div>
+
+  <!-- Feature grid -->
+  <div class="sl-grid grid gap-3">
+
+    <!-- Feature 1 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #4C4947;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #B17457;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1" fill="white"/><rect x="9" y="1" width="6" height="6" rx="1" fill="white"/><rect x="1" y="9" width="6" height="6" rx="1" fill="white"/><rect x="9" y="9" width="6" height="6" rx="1" fill="white"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #FBF7F0;">Koleksi Terkurasi</h3>
+      <p class="text-xs leading-relaxed" style="color: #E8A98A;">4 kategori: Kerudung Premium, Gamis, Palestine Series, Aksesoris Hijab — dengan filter warna, ukuran, dan harga.</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #B17457;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #fff;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2.5 7h5l2-5H5.5" stroke="#B17457" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13" r="1" fill="#B17457"/><circle cx="12" cy="13" r="1" fill="#B17457"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #fff;">Keranjang & Checkout</h3>
+      <p class="text-xs leading-relaxed" style="color: #F7EFD8;">Pilih varian, kuantitas, pilih kurir (JNE/J&T/SiCepat), metode bayar: Transfer, QRIS, COD.</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #F7EFD8; border: 1px solid #E8A98A;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #C96D3F;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L10 6H14.5L11 9L12.5 13.5L8 11L3.5 13.5L5 9L1.5 6H6L8 1.5Z" fill="white"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #4C4947;">Wishlist & Reviews</h3>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.8;">Simpan produk favorit (tanpa login), beri rating + foto review, Size Guide modal untuk panduan ukuran.</p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #F7EFD8; border: 1px solid #E8A98A;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #4C4947;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8C3 5.2 5.2 3 8 3s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z" stroke="white" stroke-width="1.5"/><path d="M8 5.5V8l2 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #4C4947;">Flash Sale & Promo</h3>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.8;">Countdown timer real-time, voucher kode, diskon otomatis, free ongkir minimal belanja, Beli X Gratis Y.</p>
+    </div>
+
+    <!-- Feature 5 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #4C4947;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #B17457;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 2H4C3 2 2 3 2 4v8c0 1 1 2 2 2h8c1 0 2-1 2-2V4c0-1-1-2-2-2z" stroke="white" stroke-width="1.5"/><path d="M5 6h6M5 8.5h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #FBF7F0;">WhatsApp Order</h3>
+      <p class="text-xs leading-relaxed" style="color: #E8A98A;">Tombol order via WhatsApp Business dengan pesan otomatis berisi nama produk, varian, dan harga.</p>
+    </div>
+
+    <!-- Feature 6 -->
+    <div class="feature-card rounded-xl p-4" style="background-color: #B17457;">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background-color: #fff;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L9.5 4.5H14L10.5 7L12 11L8 8.5L4 11L5.5 7L2 4.5H6.5L8 1Z" fill="#B17457"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1" style="color: #fff;">Admin Panel Lengkap</h3>
+      <p class="text-xs leading-relaxed" style="color: #F7EFD8;">Dashboard analytics, manajemen produk/pesanan/blog/promo, pengaturan toko, konten beranda drag-and-drop.</p>
+    </div>
+
+  </div>
+
+</section>
