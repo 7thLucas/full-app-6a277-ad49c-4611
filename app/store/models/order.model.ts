@@ -2,45 +2,45 @@ import { prop, getModelForClass, modelOptions } from "@typegoose/typegoose";
 import { TimeStamps } from "@typegoose/typegoose/lib/defaultClasses";
 
 export class OrderItem {
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   productId!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   productName!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   productImage?: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   variant!: string;
 
-  @prop({ required: true })
+  @prop({ type: Number, required: true })
   price!: number;
 
-  @prop({ required: true, min: 1 })
+  @prop({ type: Number, required: true, min: 1 })
   quantity!: number;
 
-  @prop({ required: true })
+  @prop({ type: Number, required: true })
   subtotal!: number;
 }
 
 export class ShippingAddress {
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   fullName!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   phone!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   addressLine!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   city!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   province!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   postalCode!: string;
 }
 
@@ -53,19 +53,19 @@ export class ShippingAddress {
   },
 })
 export class Order extends TimeStamps {
-  @prop({ required: true, unique: true })
+  @prop({ type: String, required: true, unique: true })
   orderNumber!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   userId?: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   buyerName!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   buyerEmail?: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   buyerPhone!: string;
 
   @prop({ type: () => ShippingAddress, required: true })
@@ -74,22 +74,23 @@ export class Order extends TimeStamps {
   @prop({ type: () => [OrderItem], required: true })
   items!: OrderItem[];
 
-  @prop({ required: true })
+  @prop({ type: Number, required: true })
   subtotal!: number;
 
-  @prop({ required: true, default: 0 })
+  @prop({ type: Number, required: true, default: 0 })
   shippingCost!: number;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   discount!: number;
 
-  @prop({ required: true })
+  @prop({ type: Number, required: true })
   total!: number;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   promoCode?: string;
 
   @prop({
+    type: String,
     required: true,
     enum: ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled"],
     default: "pending",
@@ -97,34 +98,35 @@ export class Order extends TimeStamps {
   status!: string;
 
   @prop({
+    type: String,
     required: true,
     enum: ["transfer-bank", "qris", "cod"],
     default: "transfer-bank",
   })
   paymentMethod!: string;
 
-  @prop({ required: false, enum: ["pending", "paid", "failed"], default: "pending" })
+  @prop({ type: String, required: false, enum: ["pending", "paid", "failed"], default: "pending" })
   paymentStatus?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   courierName?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   trackingNumber?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   shippingService?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   estimatedDelivery?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   notes?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   adminNotes?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   referralCode?: string;
 }
 

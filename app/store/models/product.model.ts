@@ -2,42 +2,42 @@ import { prop, getModelForClass, modelOptions, index } from "@typegoose/typegoos
 import { TimeStamps } from "@typegoose/typegoose/lib/defaultClasses";
 
 export class ProductVariant {
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   color!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   colorHex!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   size!: string;
 
-  @prop({ required: true, default: 0 })
+  @prop({ type: Number, required: true, default: 0 })
   stock!: number;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   sku?: string;
 }
 
 export class ProductReview {
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   reviewerName!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   reviewerAvatar?: string;
 
-  @prop({ required: true, min: 1, max: 5 })
+  @prop({ type: Number, required: true, min: 1, max: 5 })
   rating!: number;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   comment!: string;
 
   @prop({ type: () => [String], default: [] })
   photos!: string[];
 
-  @prop({ required: true, default: () => new Date() })
+  @prop({ type: Date, required: true, default: () => new Date() })
   createdAt!: Date;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   orderId?: string;
 }
 
@@ -51,28 +51,28 @@ export class ProductReview {
 })
 @index({ name: "text", description: "text" })
 export class Product extends TimeStamps {
-  @prop({ type: () => String, required: true })
+  @prop({ type: String, required: true })
   name!: string;
 
-  @prop({ required: true, unique: true })
+  @prop({ type: String, required: true, unique: true })
   slug!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   description!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   materialCare?: string;
 
-  @prop({ required: true })
+  @prop({ type: Number, required: true })
   price!: number;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   originalPrice?: number;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   category!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   subcategory?: string;
 
   @prop({ type: () => [String], default: [] })
@@ -84,28 +84,28 @@ export class Product extends TimeStamps {
   @prop({ type: () => [ProductReview], default: [] })
   reviews!: ProductReview[];
 
-  @prop({ required: false, enum: ["best-seller", "new", "sale", ""] })
+  @prop({ type: String, required: false, enum: ["best-seller", "new", "sale", ""] })
   badge?: string;
 
-  @prop({ required: true, default: "published", enum: ["draft", "published"] })
+  @prop({ type: String, required: true, default: "published", enum: ["draft", "published"] })
   status!: string;
 
-  @prop({ required: false, default: false })
+  @prop({ type: Boolean, required: false, default: false })
   isPalestineSeries?: boolean;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   soldCount?: number;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   weight?: number;
 
   @prop({ type: () => [String], default: [] })
   tags?: string[];
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   metaTitle?: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   metaDescription?: string;
 
   get totalStock(): number {

@@ -10,19 +10,19 @@ import { TimeStamps } from "@typegoose/typegoose/lib/defaultClasses";
   },
 })
 export class Newsletter extends TimeStamps {
-  @prop({ required: true, unique: true })
+  @prop({ type: String, required: true, unique: true })
   email!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   name?: string;
 
-  @prop({ required: true, default: true })
+  @prop({ type: Boolean, required: true, default: true })
   isActive!: boolean;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   discountCode?: string;
 
-  @prop({ required: false })
+  @prop({ type: Date, required: false })
   discountUsedAt?: Date;
 }
 

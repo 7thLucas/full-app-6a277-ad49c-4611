@@ -10,58 +10,59 @@ import { TimeStamps } from "@typegoose/typegoose/lib/defaultClasses";
   },
 })
 export class Promo extends TimeStamps {
-  @prop({ required: true, unique: true })
+  @prop({ type: String, required: true, unique: true })
   code!: string;
 
-  @prop({ required: true })
+  @prop({ type: String, required: true })
   name!: string;
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   description?: string;
 
   @prop({
+    type: String,
     required: true,
     enum: ["percentage", "fixed", "free-shipping", "flash-sale", "buy-x-get-y"],
   })
   type!: string;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   discountValue?: number;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   minPurchase?: number;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   maxDiscount?: number;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   maxUsage?: number;
 
-  @prop({ required: false, default: 0 })
+  @prop({ type: Number, required: false, default: 0 })
   usedCount?: number;
 
-  @prop({ required: true })
+  @prop({ type: Date, required: true })
   startDate!: Date;
 
-  @prop({ required: true })
+  @prop({ type: Date, required: true })
   endDate!: Date;
 
-  @prop({ required: true, default: true })
+  @prop({ type: Boolean, required: true, default: true })
   isActive!: boolean;
 
   @prop({ type: () => [String], default: [] })
   applicableProducts?: string[];
 
-  @prop({ required: false })
+  @prop({ type: String, required: false })
   flashSaleProductId?: string;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   flashSalePrice?: number;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   buyQuantity?: number;
 
-  @prop({ required: false })
+  @prop({ type: Number, required: false })
   getQuantity?: number;
 }
 
