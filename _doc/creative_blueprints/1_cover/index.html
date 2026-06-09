@@ -1,0 +1,126 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500&family=Scheherazade+New:wght@400;700&display=swap');
+
+  .sl-root { font-family: 'Poppins', sans-serif; }
+  .sl-heading { font-family: 'DM Serif Display', serif; }
+  .sl-arabic { font-family: 'Scheherazade New', serif; }
+
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+
+  .mode-landscape .sl-content-col { width: 52%; }
+  .mode-portrait .sl-content-col { width: 100%; }
+
+  .mode-landscape .sl-image-col { width: 48%; }
+  .mode-portrait .sl-image-col { display: none; }
+
+  .keffiyeh-border {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(192,57,43,0.08) 0px,
+      rgba(192,57,43,0.08) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(192,57,43,0.06) 0px,
+      rgba(192,57,43,0.06) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  }
+
+  @keyframes float-up {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+  .sl-float { animation: float-up 3s ease-in-out infinite; }
+  .sl-float-delay { animation: float-up 3s ease-in-out 1s infinite; }
+</style>
+
+<section class="sl-root w-full h-full overflow-auto bg-white" style="background-color: #FBF7F0;">
+  <div class="sl-layout w-full h-full flex" style="min-height: 100%;">
+
+    <!-- Left: Content Column -->
+    <div class="sl-content-col flex flex-col justify-between p-10" style="background-color: #FBF7F0;">
+
+      <!-- Top: Brand badge -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 px-3 py-1 rounded-full" style="background-color: #F7EFD8; border: 1px solid #E8A98A;">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="3" height="3" fill="#B17457"/>
+            <rect x="5" y="1" width="3" height="3" fill="#B17457"/>
+            <rect x="9" y="1" width="3" height="3" fill="#B17457"/>
+            <rect x="1" y="5" width="3" height="3" fill="#B17457"/>
+            <rect x="9" y="5" width="3" height="3" fill="#B17457"/>
+            <rect x="1" y="9" width="3" height="3" fill="#B17457"/>
+            <rect x="5" y="9" width="3" height="3" fill="#B17457"/>
+            <rect x="9" y="9" width="3" height="3" fill="#B17457"/>
+          </svg>
+          <span class="text-xs font-medium uppercase tracking-widest" style="color: #B17457;">New Collection 2025</span>
+        </div>
+      </div>
+
+      <!-- Center: Main headline -->
+      <div class="flex flex-col gap-5">
+        <div>
+          <h1 class="sl-heading text-5xl leading-tight" style="color: #4C4947;">
+            Anggun dalam<br>
+            <em style="color: #B17457;">Iman,</em><br>
+            Indah dalam<br>
+            <em style="color: #C96D3F;">Hijab</em>
+          </h1>
+        </div>
+
+        <p class="sl-arabic text-2xl" style="color: #B17457; direction: rtl; text-align: left;">
+          الحجاب نور، والنور جمال
+        </p>
+
+        <p class="text-sm font-light leading-relaxed max-w-xs" style="color: #4C4947; opacity: 0.8;">
+          Busana muslimah premium Indonesia yang terinspirasi nilai-nilai Islami dan solidaritas Palestina. 200+ pilihan produk untuk 12.000+ pelanggan setia.
+        </p>
+
+        <!-- Chips -->
+        <div class="flex flex-wrap gap-2 mt-1">
+          <span class="sl-float text-xs px-3 py-1 rounded-full font-medium" style="background-color: #B17457; color: #fff;">Palestine Series</span>
+          <span class="sl-float-delay text-xs px-3 py-1 rounded-full font-medium" style="background-color: #F7EFD8; color: #4C4947; border: 1px solid #E8A98A;">Free Ongkir se-Indonesia</span>
+          <span class="sl-float text-xs px-3 py-1 rounded-full font-medium" style="background-color: #4C4947; color: #fff; animation-delay: 0.5s;">100% Bahan Premium</span>
+        </div>
+      </div>
+
+      <!-- Bottom: Attribution -->
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right: Image Column -->
+    <div class="sl-image-col relative overflow-hidden" style="background-color: #4C4947;">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=elegant%20Indonesian%20muslimah%20wearing%20premium%20hijab%20and%20modest%20fashion%2C%20warm%20clay%20brown%20tones%2C%20soft%20editorial%20photography%2C%20minimalist%20background%2C%20graceful%20pose%2C%20high%20fashion"
+        alt="Haifa Official Store — Busana Muslimah Premium"
+        class="w-full h-full object-cover"
+        style="filter: brightness(0.9) saturate(0.9) sepia(0.1);"
+      />
+      <!-- Overlay gradient -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(76,73,71,0.3) 0%, transparent 60%);"></div>
+
+      <!-- Keffiyeh accent band -->
+      <div class="keffiyeh-border absolute bottom-0 left-0 right-0 h-12 opacity-60"></div>
+
+      <!-- Stats overlay -->
+      <div class="absolute bottom-8 right-6 flex flex-col gap-2 items-end">
+        <div class="text-right px-3 py-2 rounded-lg" style="background: rgba(251,247,240,0.92);">
+          <div class="sl-heading text-2xl font-bold" style="color: #B17457;">12K+</div>
+          <div class="text-xs" style="color: #4C4947;">Pelanggan Setia</div>
+        </div>
+        <div class="text-right px-3 py-2 rounded-lg" style="background: rgba(251,247,240,0.92);">
+          <div class="sl-heading text-2xl font-bold" style="color: #B17457;">200+</div>
+          <div class="text-xs" style="color: #4C4947;">Pilihan Produk</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
