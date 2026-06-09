@@ -100,11 +100,13 @@ Protected by Supabase Auth. Redirects to `/admin/login` if unauthenticated; to `
 
 ## Tech Stack
 
-- **Frontend:** React + Tailwind CSS
-- **Backend / DB:** Supabase (auth, database, storage for product images)
-- **Rich text:** Quill.js or TipTap
+- **Framework:** Remix (React Router v7) + Express custom server
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + shadcn/ui
+- **Backend / DB:** Express + MongoDB (Mongoose & Typegoose)
+- **Auth:** JWT-based RBAC via the `authentication` module
 - **Charts:** Recharts
-- **State management:** Zustand or React Context
+- **State management:** React Hooks + local Context
 
 ## Strategic Principles
 
