@@ -1,0 +1,112 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500&family=Scheherazade+New:wght@400;700&display=swap');
+
+  .sl-root { font-family: 'Poppins', sans-serif; }
+  .sl-heading { font-family: 'DM Serif Display', serif; }
+  .sl-arabic { font-family: 'Scheherazade New', serif; }
+
+  .keffiyeh-bg {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(192,57,43,0.07) 0px,
+      rgba(192,57,43,0.07) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(192,57,43,0.05) 0px,
+      rgba(192,57,43,0.05) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  }
+
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="sl-root w-full h-full overflow-auto bg-white p-10" style="background-color: #FBF7F0;">
+
+  <!-- Header -->
+  <div class="flex items-start justify-between mb-5">
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <div class="w-6 h-0.5" style="background-color: #B17457;"></div>
+        <span class="text-xs font-medium uppercase tracking-widest" style="color: #B17457;">Manfaat & Dampak</span>
+      </div>
+      <h2 class="sl-heading text-3xl leading-tight" style="color: #4C4947;">
+        Nilai nyata bagi<br><em style="color: #B17457;">pelanggan & komunitas</em>
+      </h2>
+    </div>
+
+    <!-- ROI summary block -->
+    <div class="rounded-xl px-5 py-4 text-right" style="background-color: #4C4947; min-width: 160px;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #E8A98A;">Platform Lengkap</p>
+      <div class="sl-heading text-3xl" style="color: #fff;">2 in 1</div>
+      <p class="text-xs mt-1" style="color: #E8A98A;">Storefront + Admin</p>
+    </div>
+  </div>
+
+  <!-- Metric cards grid -->
+  <div class="sl-grid grid gap-3 mb-4">
+
+    <!-- Card 1 -->
+    <div class="rounded-xl p-4" style="background-color: #fff; border: 1px solid #E8A98A;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #B17457;">Jangkauan</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #4C4947;">12K+</div>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.75;">Pelanggan setia yang dipercaya dengan kualitas busana muslimah premium konsisten.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="rounded-xl p-4" style="background-color: #B17457;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #F7EFD8;">Katalog</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #fff;">200+</div>
+      <p class="text-xs leading-relaxed" style="color: #F7EFD8;">Pilihan produk lintas 4 kategori: Kerudung, Gamis, Palestine Series, Aksesoris.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="rounded-xl p-4" style="background-color: #fff; border: 1px solid #E8A98A;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #C96D3F;">Donasi Sosial</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #4C4947;">10%</div>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.75;">Dari setiap pembelian Palestine Series disumbangkan untuk kemanusiaan Palestina.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="rounded-xl p-4" style="background-color: #4C4947;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #E8A98A;">Diskon Pertama</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #fff;">15%</div>
+      <p class="text-xs leading-relaxed" style="color: #E8A98A;">Diskon pembelian pertama via newsletter — mendorong konversi pelanggan baru.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="rounded-xl p-4" style="background-color: #F7EFD8; border: 1px solid #E8A98A;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #B17457;">Pengiriman</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #4C4947;">3 Kurir</div>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.75;">JNE, J&T, SiCepat — estimasi real-time. Free ongkir se-Indonesia untuk pembelian tertentu.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="rounded-xl p-4" style="background-color: #F7EFD8; border: 1px solid #E8A98A;">
+      <p class="text-xs uppercase tracking-wider mb-1" style="color: #B17457;">Pembayaran</p>
+      <div class="sl-heading text-3xl mb-1" style="color: #4C4947;">3 Metode</div>
+      <p class="text-xs leading-relaxed" style="color: #4C4947; opacity: 0.75;">Transfer Bank, QRIS, dan COD — fleksibel untuk semua segmen pembeli Indonesia.</p>
+    </div>
+
+  </div>
+
+  <!-- Palestine solidarity strip -->
+  <div class="keffiyeh-bg rounded-xl p-4 flex items-center justify-between" style="background-color: rgba(247,239,216,0.6);">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #C96D3F;">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5C4 1.5 1.5 4 1.5 7s2.5 5.5 5.5 5.5S12.5 10 12.5 7 10 1.5 7 1.5z" fill="white" opacity="0.3"/><path d="M7 3.5C5 3.5 3.5 5 3.5 7S5 10.5 7 10.5 10.5 9 10.5 7 9 3.5 7 3.5z" fill="white"/></svg>
+      </div>
+      <div>
+        <p class="text-xs font-semibold" style="color: #C96D3F;">Solidaritas Palestina</p>
+        <p class="text-xs" style="color: #4C4947; opacity: 0.75;">Berpakaian dengan makna — motif keffiyeh eksklusif, material ramah lingkungan, pengrajin lokal Indonesia</p>
+      </div>
+    </div>
+    <p class="sl-arabic text-xl font-bold" style="color: #C96D3F; direction: rtl;">فلسطين في قلبنا</p>
+  </div>
+
+</section>
