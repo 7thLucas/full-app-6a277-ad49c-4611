@@ -62,7 +62,7 @@ Dedicated homepage section with keffiyeh pattern background accent:
 
 ## Admin Panel Features (`/admin`)
 
-Protected by Supabase Auth. Redirects to `/admin/login` if unauthenticated; to `/admin/dashboard` if authenticated.
+Protected by JWT-based RBAC auth. Redirects to `/admin/login` if unauthenticated; to `/admin/dashboard` if authenticated.
 
 - **Dashboard** — 30-day revenue line chart (Recharts), order status breakdown (Baru / Diproses / Dikirim / Selesai), active vs. sold-out products, visitor stats, 5 latest orders table, 5 top products with thumbnails
 - **Product management** — CRUD; drag-and-drop multi-photo upload (reorderable); variant management (color + size + per-variant stock); badge system (Best Seller / New / Limited / Sold Out); rich text description (Quill.js or TipTap); Draft / Active status; bulk actions
